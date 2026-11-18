@@ -17,3 +17,14 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 <img width="1282" height="855" alt="image" src="https://github.com/user-attachments/assets/47cefd8f-a937-4f02-b46b-51a02c5d9e58" />
+
+## Evidencia de pruebas
+
+La suite valida el modelo de negocios, el consumo seguro de la API y el ViewModel. Resultado: **17 pruebas aprobadas**.
+
+```bash
+flutter pub get
+flutter test
+```
+
+![Pruebas de Flutter](capturas/pruebas_flutter.png)
