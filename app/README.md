@@ -1,36 +1,48 @@
-# directorio_dolores
+# Directorio Dolores
 
-A new Flutter project.
+Aplicación de Flutter para consultar y administrar negocios de Dolores Hidalgo. Los datos se obtienen desde una API.
 
-## Getting Started
+Permite listar, buscar, crear, eliminar y marcar negocios como favoritos.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-<img width="1282" height="855" alt="image" src="https://github.com/user-attachments/assets/47cefd8f-a937-4f02-b46b-51a02c5d9e58" />
-
-## Evidencia de pruebas
-
-La suite valida el modelo de negocios, el consumo seguro de la API y el ViewModel. Resultado: **17 pruebas aprobadas**.
+## Cómo ejecutarlo
 
 ```bash
 flutter pub get
+flutter run
+```
+
+Para ejecutar las pruebas:
+
+```bash
 flutter test
 ```
 
-### Ciclo TDD: rojo a verde
+## Todas las pruebas
 
-Ambas capturas fueron tomadas de ejecuciones reales en la terminal integrada de Visual Studio Code: la fase roja muestra `undefined_function` por código aún no implementado y la fase verde muestra la suite final aprobada.
+Se ejecutaron las siguientes 17 pruebas:
 
-| 🔴 Prueba que solicita código faltante | 🟢 Implementación terminada |
+1. Convierte la lista JSON en objetos de tipo negocio.
+2. Lee todos los campos de un negocio desde JSON.
+3. Un error 500 produce una excepción de servidor con su código.
+4. Una falla de red produce una excepción de conexión.
+5. Un tiempo de espera se maneja como falta de conexión.
+6. Los campos opcionales ausentes usan valores normales.
+7. Un negocio nuevo no envía identificador en el JSON.
+8. Copiar un negocio permite cambiar sólo el favorito.
+9. Un JSON incorrecto produce una excepción de respuesta inválida.
+10. Una búsqueda envía el parámetro correctamente codificado.
+11. Crear un negocio envía JSON con el tipo de contenido correcto.
+12. Eliminar usa la petición DELETE con el identificador correcto.
+13. Cargar datos termina en estado listo.
+14. Cargar una lista vacía termina en estado vacío.
+15. Un error del servidor termina con un mensaje de error.
+16. Eliminar quita el negocio de la lista.
+17. Cambiar favorito actualiza con la respuesta del servidor.
+
+Resultado final: **17 pruebas aprobadas**.
+
+## Capturas reales de las pruebas
+
+| Fase roja | Fase verde |
 |---|---|
-| ![Error real por código faltante en la terminal de VS Code](capturas/tdd_rojo_error.png) | ![Pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png) |
+| ![Error real en la terminal de VS Code](capturas/tdd_rojo_error.png) | ![17 pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png) |
