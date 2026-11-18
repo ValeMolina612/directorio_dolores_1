@@ -43,6 +43,10 @@ Resultado final: **17 pruebas aprobadas**.
 
 ## Capturas reales de las pruebas
 
-| Fase roja | Fase verde |
-|---|---|
-| ![Error real en la terminal de VS Code](capturas/tdd_rojo_error.png) | ![17 pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png) |
+### Fase roja
+
+![Error real en la terminal de VS Code](capturas/tdd_rojo_error.png)
+
+### Fase verde
+
+![17 pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png)
