@@ -1,52 +1,108 @@
-# Directorio Dolores
+# Directorio de Dolores Hidalgo
 
-Aplicación de Flutter para consultar y administrar negocios de Dolores Hidalgo. Los datos se obtienen desde una API.
+Aplicación para consultar negocios de Dolores Hidalgo mediante una API local y mostrar sus estados de carga, datos y error.
 
-Permite listar, buscar, crear, eliminar y marcar negocios como favoritos.
+## Cómo ejecutar
 
-## Cómo ejecutarlo
+1. Instalar las dependencias con `flutter pub get`.
+2. Ejecutar las pruebas con `flutter test`.
+3. Abrir la aplicación con `flutter run`.
 
-```bash
-flutter pub get
-flutter run
-```
+## Trabajo con TDD
 
-Para ejecutar las pruebas:
+En cada fase se siguió el ciclo rojo y verde. La captura roja muestra el error real producido antes de completar el código faltante. La captura verde muestra en Visual Studio Code el código usado para resolver esa fase.
 
-```bash
-flutter test
-```
-
-## Todas las pruebas
-
-Se ejecutaron las siguientes 17 pruebas:
-
-1. Convierte la lista JSON en objetos de tipo negocio.
-2. Lee todos los campos de un negocio desde JSON.
-3. Un error 500 produce una excepción de servidor con su código.
-4. Una falla de red produce una excepción de conexión.
-5. Un tiempo de espera se maneja como falta de conexión.
-6. Los campos opcionales ausentes usan valores normales.
-7. Un negocio nuevo no envía identificador en el JSON.
-8. Copiar un negocio permite cambiar sólo el favorito.
-9. Un JSON incorrecto produce una excepción de respuesta inválida.
-10. Una búsqueda envía el parámetro correctamente codificado.
-11. Crear un negocio envía JSON con el tipo de contenido correcto.
-12. Eliminar usa la petición DELETE con el identificador correcto.
-13. Cargar datos termina en estado listo.
-14. Cargar una lista vacía termina en estado vacío.
-15. Un error del servidor termina con un mensaje de error.
-16. Eliminar quita el negocio de la lista.
-17. Cambiar favorito actualiza con la respuesta del servidor.
-
-Resultado final: **17 pruebas aprobadas**.
-
-## Capturas reales de las pruebas
+## Fase 1. API local
 
 ### Fase roja
 
-![Error real en la terminal de VS Code](capturas/tdd_rojo_error.png)
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 1](capturas/fases/fase_01_roja.png)
 
 ### Fase verde
 
-![17 pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png)
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 1](capturas/fases/fase_01_verde.png)
+
+## Fase 2. Modelo Negocio
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 2](capturas/fases/fase_02_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 2](capturas/fases/fase_02_verde.png)
+
+## Fase 3. Cliente HTTP con MockClient
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 3](capturas/fases/fase_03_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 3](capturas/fases/fase_03_verde.png)
+
+## Fase 4. Conectar la aplicación y la API
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 4](capturas/fases/fase_04_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 4](capturas/fases/fase_04_verde.png)
+
+## Fase 5. ViewModel y estados
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 5](capturas/fases/fase_05_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 5](capturas/fases/fase_05_verde.png)
+
+## Fase 6. Pantalla y prueba final
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 6](capturas/fases/fase_06_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 6](capturas/fases/fase_06_verde.png)
+
+## Aplicación completa
+
+Esta es la aplicación ejecutándose después de terminar las fases.
+
+![Aplicación completa](capturas/app_final.png)
+
+## Resultado
+
+Las fases quedaron documentadas una por una. Cada fase conserva su evidencia roja y verde, y al final se muestra el resultado completo de la aplicación.
+
